@@ -5,7 +5,7 @@ def clean_html(html: str) -> str:
     soup = BeautifulSoup(html, "html.parser")
 
     # Remove <script> and <style> tags
-    for tag in soup(["script", "style"]):
+    for tag in soup(["script", "style", "i"]):
         tag.decompose()
 
     # Remove all attributes from all tags
